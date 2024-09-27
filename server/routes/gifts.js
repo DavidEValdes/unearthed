@@ -1,7 +1,6 @@
 import express from 'express'
 import path from 'path'
 import { fileURLToPath } from 'url'
-import giftData from '../data/gifts.js'
 import GiftsController from '../controllers/gifts.js'
 
 const __filename = fileURLToPath(import.meta.url)
