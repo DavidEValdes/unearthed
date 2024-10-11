@@ -79,5 +79,8 @@ const getGiftById = async (req, res) => {
 
 export default {
   getGifts,
-  getGiftById
+  getGiftById,
+  createGift,
+  updateGift,
+  deleteGift 
 }
