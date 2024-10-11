@@ -31,30 +31,19 @@ const CreateGift = () => {
     }
     
     const createGift = (event) => {
-        event.preventDefault();
-        
-        console.log(gift); // Log the gift data to ensure it's populated correctly
-    
+        event.preventDefault()
+
         const options = {
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/json'
-            },
-            body: JSON.stringify(gift) // Convert the gift object to JSON
-        };
-    
-        fetch('http://localhost:3001/gifts', options)
-            .then(response => {
-                if (response.ok) {
-                    window.location = '/'; // Redirect on success
-                } else {
-                    response.json().then(data => {
-                        alert(`Failed to create gift: ${data.error}`);
-                    });
-                }
-            })
-            .catch(error => console.error('Error:', error));
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(gift) // Convert the gift object to JSON
+        
     };
+    const response = fetch('http://localhost:3001/gifts', options)
+    window.location = '/'
+    }
 
     return (
         <div className='CreateGift'>
