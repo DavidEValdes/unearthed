@@ -17,7 +17,7 @@ const Gifts = (props) => {
                 gifts && gifts.length > 0 ? (
                     gifts.map((gift) => (
                         <Card 
-                            key={gift.id}  // Unique key for each item
+                            key={gift.id}  
                             id={gift.id} 
                             image={gift.image} 
                             name={gift.name} 
