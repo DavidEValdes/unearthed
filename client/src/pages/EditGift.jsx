@@ -18,7 +18,7 @@ const EditGift = () => {
 
     useEffect(() => {
         const fetchGiftById = async () => {
-            const response = await fetch(`/gifts/${id}`)
+            const response = await fetch(`http://localhost:3001/gifts/${id}`)
             const data = await response.json()
             setGift(data)
         }
